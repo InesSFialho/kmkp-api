@@ -13,6 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::apiResource('users', 'API\UserController');
+Route::apiResource('users.pantries', 'API\PantryController')->shallow();
+Route::apiResource('ingredients', 'API\IngredientController');
+Route::apiResource('diets', 'API\DietController');
+Route::apiResource('diets.recipes', 'API\RecipeController')->shallow();
+Route::apiResource('meals', 'API\MealController');
+Route::apiResource('sidedishes', 'API\SidedishController');
+Route::apiResource('types', 'API\SidedishTypeController');
+
+

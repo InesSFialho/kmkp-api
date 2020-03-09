@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers;
 
-use App\Sidedish;
-use App\Http\Controllers\Controller;
+use App\MealType;
 use Illuminate\Http\Request;
 
-class SidedishController extends Controller
+class MealTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,10 +31,10 @@ class SidedishController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Sidedish  $sidedish
+     * @param  \App\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function show(Sidedish $sidedish)
+    public function show(MealType $mealType)
     {
         //
     }
@@ -44,10 +43,10 @@ class SidedishController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Sidedish  $sidedish
+     * @param  \App\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sidedish $sidedish)
+    public function update(Request $request, MealType $mealType)
     {
         //
     }
@@ -55,10 +54,10 @@ class SidedishController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Sidedish  $sidedish
+     * @param  \App\MealType  $mealType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sidedish $sidedish)
+    public function destroy(MealType $mealType)
     {
         //
     }

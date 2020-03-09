@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Recipe;
 
 class RecipesTableSeeder extends Seeder
 {
@@ -11,6 +12,8 @@ class RecipesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $recipe = new Recipe;
+        $recipe->title = 'Arroz de Cenoura';
+        $recipe->save();
     }
 }

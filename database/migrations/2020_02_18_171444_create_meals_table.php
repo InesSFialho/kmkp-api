@@ -15,7 +15,8 @@ class CreateMealsTable extends Migration
     {
         Schema::create('meals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');
+            $table->unsignedBigInteger('type_id');
+            $table->foreign('type_id')->references('id')->on('meal_types')->onDelete('cascade');
             $table->timestamps();
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';

@@ -16,7 +16,6 @@ class CreateRecipesTable extends Migration
         Schema::create('recipes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title');
-            $table->longtext('directions');
             $table->timestamps();
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';

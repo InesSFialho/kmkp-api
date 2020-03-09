@@ -21,8 +21,8 @@ class CreateIngredientsTable extends Migration
             $table->foreign('family_id')->references('id')->on('families')->onDelete('cascade');
             $table->timestamps();
             $table->engine = 'InnoDB';
-            $table->charset = 'utf8';
-            $table->collation = 'utf8_unicode_ci';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
         });
     }
 

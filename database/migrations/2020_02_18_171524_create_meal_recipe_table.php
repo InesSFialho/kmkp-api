@@ -19,6 +19,7 @@ class CreateMealRecipeTable extends Migration
             $table->unsignedBigInteger('recipe_id');
             $table->foreign('recipe_id')->references('id')->on('recipes')->onDelete('cascade');
             $table->primary(['meal_id', 'recipe_id']);
+            $table->boolean('sidedish');
             $table->engine = 'InnoDB';
             $table->charset = 'utf8';
             $table->collation = 'utf8_unicode_ci';

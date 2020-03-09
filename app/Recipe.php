@@ -16,13 +16,25 @@ class Recipe extends Model
         return $this->belongsToMany(Ingredient::class, 'ingredient_recipe');
     }
 
+    public function meals()
+    {
+        return $this->belongsToMany(Meal::class, 'recipe_meals');
+    }
+
     public function sidedishes()
     {
-        return $this->belongsToMany(Sidedish::class, 'recipe_sidedish');
+        return $this->belongsToMany(Meal::class, 'recipe_meals')->wherePivot('sidedish', 1);
+    }
+
+    public function maindishes()
+    {
+        return $this->belongsToMany(Meal::class, 'recipe_meals')->wherePivot('sidedish', 0);
     }
 
     public function directions()
     {
         return $this->hasMany(Direction::class);
     }
+
+
 }

@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Sidedish;
+use App\MealType;
 use Faker\Generator as Faker;
 
-$factory->define(Sidedish::class, function (Faker $faker) {
+$factory->define(MealType::class, function (Faker $faker) {
     return [
         //
     ];
